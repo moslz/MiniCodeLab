@@ -1,7 +1,7 @@
 
 # Password Cracking
 
-The `password_cracking.py` script is a simple Python script that attempts to crack hashed passwords. It takes a file containing hashed passwords as input and tries to find the corresponding passwords by generating various combinations of lowercase letters.
+The `password_cracking.py` script is a simple Python script that attempts to crack hashed passwords. It takes a file containing hashed passwords as input and tries to find the corresponding passwords by generating various combinations of lowercase letters.This Script was Originally an exercise in my Cryptography class. 
 
 ## Requirements
 
