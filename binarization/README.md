@@ -1,6 +1,6 @@
 # Image Processing
 
-This Python program reads an input image and applies some morphological operators to enhance, binarize, filter, and overlay the image. The processed images are displayed using matplotlib and can be saved to separate image files.
+This Python program reads an input image and applies some morphological operators to enhance, binarize, filter, and overlay the image. The processed images are displayed using matplotlib and will be saved to separate image files.
 
 ## Prerequisites
 
