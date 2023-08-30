@@ -1,0 +1,16 @@
+[
+  { "type": "cash", "text": "$500", "value": 500, "prize": "A vacation to Hawaii!" },
+  { "type": "cash", "text": "$300", "value": 300, "prize": "A shopping spree!" },
+  { "type": "bankrupt", "text": "Bankrupt", "prize": false },
+  { "type": "loseturn", "text": "Lose a turn", "prize": false },
+  { "type": "cash", "text": "$700", "value": 700, "prize": "A new car!" },
+  { "type": "cash", "text": "$400", "value": 400, "prize": "A fancy dinner!" },
+  { "type": "cash", "text": "$800", "value": 800, "prize": "A luxury watch!" },
+  { "type": "cash", "text": "$350", "value": 350, "prize": "A spa day!" },
+  { "type": "bankrupt", "text": "Bankrupt", "prize": false },
+  { "type": "loseturn", "text": "Lose a turn", "prize": false },
+  { "type": "cash", "text": "$600", "value": 600, "prize": "A weekend getaway!" },
+  { "type": "cash", "text": "$250", "value": 250, "prize": "A gift card!" },
+  { "type": "cash", "text": "$900", "value": 900, "prize": "A home theater system!" }
+]
+
