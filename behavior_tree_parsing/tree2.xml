@@ -1,42 +1,32 @@
 <root main_tree_to_execute="MainTree">
     <BehaviorTree ID="MainTree">
         <Selector name="MainSelector">
-            <Sequence name="Initialization">
-                <Action name="CheckSensors"/>
-                <Action name="CalibrateSensors"/>
-                <Action name="StartEngine"/>
+            <Sequence name="Pre-OperationalChecks">
+                <Action name="SelfDiagnostics"/>
+                <Action name="EnvironmentAssessment"/>
+                <Action name="UserSettingsCheck"/>
             </Sequence>
-            <Selector name="TaskSelector">
-                <Sequence name="NavigateToDestination">
-                    <Action name="ReceiveDestination"/>
-                    <Action name="PlanRoute"/>
-                    <Action name="FollowWaypoints"/>
-                    <Action name="ArriveAtDestination"/>
+            <Selector name="DrivingModeSelector">
+                <Sequence name="ManualControl">
+                    <Action name="EnableManualControls"/>
+                    <Action name="MonitorManualOperation"/>
                 </Sequence>
-                <Sequence name="ObstacleAvoidance">
-                    <Action name="DetectObstacles"/>
-                    <Selector name="AvoidanceStrategy">
-                        <Sequence name="BrakeAndSteer">
-                            <Action name="ApplyBrakes"/>
-                            <Action name="SteerAway"/>
-                        </Sequence>
-                        <Sequence name="ChangeLane">
-                            <Action name="CheckLaneChangeConditions"/>
-                            <Action name="PerformLaneChange"/>
-                        </Sequence>
-                    </Selector>
+                <Sequence name="AutonomousNavigation">
+                    <Action name="SetDestination"/>
+                    <Action name="CalculateRoute"/>
+                    <Action name="AutonomousDrive"/>
+                    <Action name="DestinationReached"/>
                 </Sequence>
-                <Selector name="ParkingSelector">
-                    <Sequence name="ParallelParking">
-                        <Action name="SearchParkingSpace"/>
-                        <Action name="ParallelPark"/>
-                    </Sequence>
-                    <Sequence name="PerpendicularParking">
-                        <Action name="SearchParkingSpace"/>
-                        <Action name="PerpendicularPark"/>
-                    </Sequence>
-                </Selector>
+                <Sequence name="Parking">
+                    <Action name="TurnOnIndicators"/>
+                    <Action name="ProceedToPark"/>
+                </Sequence>
             </Selector>
+            <Sequence name="EmergencyHandling">
+                <Action name="DetectEmergency"/>
+                <Action name="ActivateSafetyProtocols"/>
+                <Action name="NotifyEmergencyServices"/>
+            </Sequence>
         </Selector>
     </BehaviorTree>
 </root>
